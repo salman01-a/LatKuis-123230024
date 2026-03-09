@@ -29,12 +29,12 @@ class _MovieListPageState extends State<MovieListPage> {
               IconButton(
                 onPressed: () {
                   setState(() {
-                    movieList[index].isFavorite = !movieList[index].isFavorite;
+                    movieList[index].isAdded = !movieList[index].isAdded;
                   });
                 },
                 icon: Icon(
                   Icons.favorite,
-                  color: movieList[index].isFavorite
+                  color: movieList[index].isAdded
                       ? Colors.blue
                       : Colors.grey,
                 ),
@@ -57,13 +57,12 @@ class _MovieListPageState extends State<MovieListPage> {
                   ElevatedButton(
                     onPressed: () {
                       setState(() {
-                        movieList[index].isFavorite =
-                            !movieList[index].isFavorite;
+                        movieList[index].isAdded = !movieList[index].isAdded;
                       });
                     },
-                    child: Text(""),
+                    child: Text("Tambah ke Daftar"),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: movieList[index].isFavorite
+                      backgroundColor: movieList[index].isAdded
                           ? Colors.blue
                           : Colors.grey,
                       foregroundColor: Colors.white,

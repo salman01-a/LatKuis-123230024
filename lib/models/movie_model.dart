@@ -8,7 +8,7 @@ class MovieModel {
   String synopsis;
   String imgUrl;
   String movieUrl;
-  bool isFavorite = false;
+  bool isAdded = false;
 
   MovieModel({
     required this.title,
@@ -20,7 +20,7 @@ class MovieModel {
     required this.synopsis,
     required this.imgUrl,
     required this.movieUrl,
-    required this.isFavorite,
+    required this.isAdded,
   });
 }
 
@@ -37,7 +37,7 @@ List<MovieModel> movieList = [
     imgUrl:
         "https://m.media-amazon.com/images/M/MV5BMTM0MjUzNjkwMl5BMl5BanBnXkFtZTcwNjY0OTk1Mw@@._V1_.jpg",
     movieUrl: "https://en.wikipedia.org/wiki/Inception",
-    isFavorite: false,
+    isAdded: false,
   ),
   MovieModel(
     title: "The Shawshank Redemption",
@@ -51,7 +51,7 @@ List<MovieModel> movieList = [
     imgUrl:
         "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_.jpg",
     movieUrl: "https://en.wikipedia.org/wiki/The_Shawshank_Redemption",
-    isFavorite: false,
+    isAdded: false,
   ),
   MovieModel(
     title: "Interstellar",
@@ -65,7 +65,7 @@ List<MovieModel> movieList = [
     imgUrl:
         "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     movieUrl: "https://en.wikipedia.org/wiki/Interstellar_(film)",
-    isFavorite: false,
+    isAdded: false,
   ),
   MovieModel(
     title: "The Dark Knight",
@@ -79,7 +79,7 @@ List<MovieModel> movieList = [
     imgUrl:
         "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX1000_.jpg",
     movieUrl: "https://en.wikipedia.org/wiki/The_Dark_Knight",
-    isFavorite: false,
+    isAdded: false,
   ),
   MovieModel(
     title: "Forrest Gump",
@@ -93,7 +93,7 @@ List<MovieModel> movieList = [
     imgUrl:
         "https://m.media-amazon.com/images/M/MV5BNDYwNzVjMTItZmU5YS00YjQ5LTljYjgtMjY2NDVmYWMyNWFmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     movieUrl: "https://en.wikipedia.org/wiki/Forrest_Gump",
-    isFavorite: false,
+    isAdded: false,
   ),
   MovieModel(
     title: "The Matrix",
@@ -107,7 +107,7 @@ List<MovieModel> movieList = [
     imgUrl:
         "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_.jpg",
     movieUrl: "https://en.wikipedia.org/wiki/The_Matrix",
-    isFavorite: false,
+    isAdded: false,
   ),
   MovieModel(
     title: "The Godfather",
@@ -121,7 +121,7 @@ List<MovieModel> movieList = [
     imgUrl:
         "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     movieUrl: "https://en.wikipedia.org/wiki/The_Godfather",
-    isFavorite: false,
+    isAdded: false,
   ),
   MovieModel(
     title: "Titanic",
@@ -135,7 +135,7 @@ List<MovieModel> movieList = [
     imgUrl:
         "https://m.media-amazon.com/images/M/MV5BYzYyN2FiZmUtYWYzMy00MzViLWJkZTMtOGY1ZjgzNWMwN2YxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     movieUrl: "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
-    isFavorite: false,
+    isAdded: false,
   ),
   MovieModel(
     title: "Pulp Fiction",
@@ -149,7 +149,7 @@ List<MovieModel> movieList = [
     imgUrl:
         "https://m.media-amazon.com/images/M/MV5BYTViYTE3ZGQtNDBlMC00ZTAyLTkyODMtZGRiZDg0MjA2YThkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     movieUrl: "https://en.wikipedia.org/wiki/Pulp_Fiction",
-    isFavorite: false,
+    isAdded: false,
   ),
   MovieModel(
     title: "Avatar",
@@ -163,7 +163,7 @@ List<MovieModel> movieList = [
     imgUrl:
         "https://m.media-amazon.com/images/M/MV5BMDEzMmQwZjctZWU2My00MWNlLWE0NjItMDJlYTRlNGJiZjcyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     movieUrl: "https://en.wikipedia.org/wiki/Avatar_(2009_film)",
-    isFavorite: false,
+    isAdded: false,
   ),
   MovieModel(
     title: "The Lord of the Rings: The Fellowship of the Ring",
@@ -178,7 +178,7 @@ List<MovieModel> movieList = [
         "https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     movieUrl:
         "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring",
-    isFavorite: false,
+    isAdded: false,
   ),
   MovieModel(
     title: "Fight Club",
@@ -192,6 +192,6 @@ List<MovieModel> movieList = [
     imgUrl:
         "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     movieUrl: "https://en.wikipedia.org/wiki/Fight_Club",
-    isFavorite: false,
+    isAdded: false,
   ),
 ];
