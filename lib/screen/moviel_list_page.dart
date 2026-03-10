@@ -70,7 +70,7 @@ class _MovieListPageState extends State<MovieListPage> {
                   ),
                 ],
               ),
-              trailing: Text(movieList[index].rating.toString()),
+              trailing: Text(movieList[index].rating.toString() + "/10"),
               onTap: () {
                 Navigator.push(
                   context,
